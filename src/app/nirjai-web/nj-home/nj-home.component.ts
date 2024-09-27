@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-nj-home',
   templateUrl: './nj-home.component.html',
   styleUrls: ['./nj-home.component.scss']
 })
-export class NjHomeComponent implements OnInit {
+export class NjHomeComponent implements OnInit, AfterViewInit  {
 
   selectedTab: number = 1;
   observer:any;
@@ -16,11 +17,26 @@ export class NjHomeComponent implements OnInit {
   service = '';
   industry = '';
   description = '';
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.ovservElement();
     this.scrollAnimation();
+  }
+
+  ngAfterViewInit() {
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        this.scrollToSection(fragment);
+      }
+    });
+  }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   technologiesIcon = [
