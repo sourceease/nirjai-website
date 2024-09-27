@@ -1,0 +1,144 @@
+<header class="font-[Poppins]">
+    <!-- <div class=" p-4 lg:p-2 lg:px-20 w-full"
+    [ngClass]="{'bg-white text-black ': scrollThreshold2,'bg-transparent text-white': !scrollThreshold2}"
+    > -->
+    <div class="p-2 lg:p-2 lg:px-20 w-full bg-gradient-to-r from-[#25140d] to-[#4c271f]">
+        <div class="container  lg:mx-auto flex items-center justify-between ">
+            <div class="flex items-center">
+                <!-- Logo (visible on large screens) -->
+                <!-- <img *ngIf="scrollThreshold2" class=" lg:flex lg:w-72 w-40 ml-2" src="assets\images\mmw\Logo\mmw_light_mode.png"> -->
+                <div routerLink="/sourceease/website/home">
+                    <img *ngIf="scrollThreshold2" class=" lg:flex lg:w-44 w-[13rem] "
+                        src="../../../../../../../../assets/nirjai/home/logo.png">
+                    <img *ngIf="!scrollThreshold2" class=" lg:flex lg:w-44 w-[13rem] "
+                        src="../../../../../../../../assets/nirjai/home/logo.png">
+                </div>
+
+            </div>
+
+            <div id="navbar-links" class="hidden  md:flex space-x-6 mr-10">
+                <a routerLink="/home" routerLinkActive="font-bold text-xl"
+                    class="hover:underline p-2 roboto-font flex items-center text-lg text-white">
+                    <!-- <mat-icon svgIcon="mat_outline:home" class="mx-1" [ngClass]="{'text-white': !scrollThreshold2}"></mat-icon> -->
+                    About Us
+                </a>
+                <a routerLink="/home" routerLinkActive="font-bold text-xl"
+                class="hover:underline p-2 roboto-font flex items-center text-lg text-white">
+                <!-- <mat-icon svgIcon="mat_outline:home" class="mx-1" [ngClass]="{'text-white': !scrollThreshold2}"></mat-icon> -->
+                Services
+            </a>
+            <a routerLink="/home" routerLinkActive="font-bold text-xl"
+                class="hover:underline p-2 roboto-font flex items-center text-lg text-white">
+                <!-- <mat-icon svgIcon="mat_outline:home" class="mx-1" [ngClass]="{'text-white': !scrollThreshold2}"></mat-icon> -->
+                Our Approach
+            </a>
+                <a routerLinkActive="font-bold text-xl" class=" cursor-pointer p-2 text-white flex items-center text-lg" [matMenuTriggerFor]="serviceMenu">
+                    <span class="hover:underline p-2 roboto-font flex items-center text-lg">Why us</span>
+                    <span class="material-symbols-outlined pt-0.5">
+                       
+                        </span>
+                        <!-- expand_more -->
+                </a>
+                <!-- <a class="hover:underline p-2 flex items-center text-lg roboto-font">
+                    Services
+                </a> -->
+                <a class="hover:underline p-2 flex items-center text-lg Poppins-font text-white" 
+                    routerLinkActive="font-bold text-xl" routerLink="/about-us">
+                    IT Training
+                </a>
+                <a class="hover:underline p-2 flex items-center text-lg Poppins-font text-white"
+                    routerLinkActive="font-bold text-xl" routerLink="/about-us">
+                    Contact Us
+                </a>
+                <!-- <a routerLink="/ujm-sign-in" class="hover:underline p-2  flex items-center text-lg">
+                    Login
+                </a>
+                <a routerLink="/ujm/website/signup" routerLinkActive="font-bold text-xl" class="hover:underline p-2 flex items-center text-lg">
+                  Sign Up
+                </a> -->
+                <!-- <a href="http://122.180.240.197:5405/ujm-sign-in" class="hover:underline p-2  flex items-center text-lg"> -->
+
+
+                <mat-menu #serviceMenu="matMenu" >
+                    <!-- <button class="text-black" mat-menu-item routerLink="/it-staffing">IT Staffing</button>
+                    <button class="text-black" mat-menu-item ><a href="https://www.urjobmart.com/ujm/website/home" class="w-full h-full inline-block" target="_blank"> Recruiters Solutions </a></button> -->
+                    <!-- <button class="text-black" mat-menu-item routerLink="/ujm/website/interviewer">Interviewers</button> -->
+  
+                </mat-menu>
+            </div>
+
+
+            <!-- Hamburger menu icon (visible on small screens) [matMenuTriggerFor]="menu" -->
+            <button class="md:hidden focus:outline-none " mat-button (click)="openHmbg()">
+                <!-- <mat-icon *ngIf="!hmbrOpen" class="icon-size-8" svgIcon="mat_solid:menu">
+                </mat-icon>
+                <mat-icon *ngIf="hmbrOpen" class="icon-size-8" svgIcon="mat_solid:close">
+                </mat-icon> -->
+                <mat-icon class="icon-size-8">menu</mat-icon>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- for mobile screen menu -->
+
+<div [ngClass]="{'left-40 ':hmbrOpen,'left-200 ':!hmbrOpen}"
+    class="w-full h-180 absolute bg-white rounded-xl rounded-t-2xl transition-all md:hidden ">
+
+    <div class="flex flex-col space-y-4 bg-white p-4 ">
+        <button routerLinkActive="font-bold text-indigo-900" routerLink="/home" (click)="openHmbg()" class="text-xl "
+            mat-menu-item>
+            <mat-icon routerLinkActive=" text-indigo-900" class="icon-size-8">Home
+            </mat-icon>Home
+        </button>
+        <button routerLinkActive="font-bold text-indigo-900" routerLink="/about-us" (click)="openHmbg()"
+            class="text-xl " mat-menu-item>
+            <mat-icon routerLinkActive=" text-indigo-900" class="icon-size-8">group
+            </mat-icon>About Us
+        </button>
+
+        <div class="flex flex-col">
+            <button class="text-xl " mat-menu-item>
+                <mat-icon routerLinkActive=" text-indigo-900" class="icon-size-8"> <span
+                        routerLinkActive=" text-indigo-900" class="material-symbols-outlined"> hub </span>
+                </mat-icon>Services
+            </button>
+
+            <ul class="flex flex-col pl-12">
+                <li >
+                    <button routerLink="/it-staffing" routerLinkActive="font-bold text-indigo-900"  (click)="openHmbg()" mat-menu-item>IT Staffing
+                    </button>
+                </li>
+                <li >
+                    <button  routerLinkActive="font-bold text-indigo-900" (click)="openHmbg()" mat-menu-item><a href="https://www.urjobmart.com/ujm/website/home" target="_blank"> Recruiters Solutions </a>
+                    </button>
+                </li>
+                <!-- <li>
+                    <button routerLink="/ujm/website/interviewer" routerLinkActive="font-bold text-indigo-900" (click)="openHmbg()" mat-menu-item> Interviewers
+                    </button>
+                </li> -->
+            </ul>
+
+
+        </div>
+
+
+
+        <!-- <button routerLinkActive="font-bold text-indigo-900" routerLink="/ujm-sign-in"
+                class="text-xl " 
+                mat-menu-item >
+                <mat-icon routerLinkActive=" text-indigo-900"
+                    class="icon-size-8"
+                    svgIcon="mat_outline:how_to_reg"> 
+                </mat-icon>Login
+        </button> -->
+        <button routerLinkActive="font-bold text-indigo-900" routerLink="/contact-us" (click)="openHmbg()"
+            class="text-xl " mat-menu-item>
+            <mat-icon class="icon-size-8"> <span routerLinkActive=" text-indigo-900" class="material-symbols-outlined">
+                    call </span>
+            </mat-icon>Contact Us
+        </button>
+
+    </div>
+
+</div>

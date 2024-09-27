@@ -1,0 +1,264 @@
+
+* {
+    // margin: 0;
+    // padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.innerContainer {
+    max-width: 100%;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.mainBg {
+    // background-image: url('../../../../../../../../assets/images/sourceease/home/main.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.7)), url('../../../assets/nirjai/home/light-bulb-electricity 1.png');
+    background-size: 100%;
+    background-size: cover;
+    height: 94vh;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+.callbackButton {
+    background-color: #ffa500; 
+    color: white; 
+    font-size: 18px; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-bottom: 10vh;
+}
+
+.callbackButton:hover {
+    background-color: #ff8c00; /* Darker shade on hover */
+}
+
+.bgTxt {
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+    width: 46rem;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 5vh;
+}
+
+.diffCornBrdr {
+    border-radius: 20px 0px 20px 20px;
+}
+
+.wychosUs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.wyItem1 {
+    grid-column-start: span 2;
+}
+
+.wyItem2 {
+    grid-column-start: span 3;
+}
+
+.wyItem3 {
+    grid-column-start: span 3;
+}
+
+.wyItem4 {
+    grid-column-start: span 2;
+}
+
+.wyItem5 {
+    grid-column-start: span 5;
+}
+
+.boxShadow {
+    border: 0.4px solid #4242429c;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.scrolling-container {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.scrolling-content {
+    display: inline-flex;
+    animation: scrolling 35s linear infinite forwards;
+    animation-delay: 0s;
+}
+
+.scrolling-container:hover .scrolling-content {
+    animation-play-state: paused;
+}
+
+.custom-b-r {
+    border-radius: 0px 0px 22px 22px;
+}
+
+// here is animation code start
+
+.custom-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+.left_animate:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.left_animate:nth-child(3) {
+    transition-delay: 500ms;
+}
+
+.left_animate1:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.left_animate1:nth-child(3) {
+    transition-delay: 500ms;
+}
+
+.left_animate1:nth-child(4) {
+    transition-delay: 700ms;
+}
+
+// animation end
+
+
+// fade animation
+
+.fade_content {
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.revel_heading {
+    background: linear-gradient(90deg, black, transparent);
+    background-size: 200%;
+    animation: revel both linear;
+    animation-timeline: view();
+    background-repeat: no-repeat;
+    animation-range: entry 50% cover 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+// @keyframes revel {
+//     from {
+//         background-position-x: 200%;
+//     }
+
+//     to {
+//         background-position-x: 0%;
+//     }
+// }
+
+// parallax keyframe
+
+// @keyframes parallax {
+//     to {
+//         transform:
+//             translateY(calc(var(--parallax-speed) * 200px));
+//     }
+// }
+
+// @media (prefers-reduced-motion) {
+//     .custom-hidden {
+//         transition: none;
+//     }
+// }
+
+
+// ====================================================== responsiveness
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+@media(max-width:500px) {
+    @keyframes scrolling {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-600%);
+        }
+    }
+}
+
+// screen 600
+
+@media(max-width:600px) {
+    .wychosUs-grid {
+        display: block;
+    }
+
+    .bgTxt {
+        font-size: 40px;
+        width: 23rem;
+        line-height: normal;
+    }
+
+    // mobMain.png
+    .mainBg {
+        // background-image: url('../../../../../../../../assets/images/sourceease/home/main.png');
+        background: linear-gradient(rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.7)), url('../../../assets/nirjai/home/light-bulb-electricity 1.png');
+        background-size: 100%;
+        background-size: cover;
+        height: 20rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .scrolling-content>img {
+        width: 25rem !important;
+        height: 3rem !important;
+    }
+
+    .innerContainer {
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-device-width: 1980px) and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .hello {
+        height: 33rem !important;
+    }
+}
