@@ -9,7 +9,13 @@ export class NjHomeComponent implements OnInit {
 
   selectedTab: number = 1;
   observer:any;
-
+  firstName = '';
+  lastName = '';
+  email = '';
+  phone = '';
+  service = '';
+  industry = '';
+  description = '';
   constructor() { }
 
   ngOnInit(): void {
@@ -115,5 +121,33 @@ export class NjHomeComponent implements OnInit {
     const hiddenElements = document.querySelectorAll('.custom-hidden');
     hiddenElements.forEach((e1) => this.observer.observe(e1));
   }
+
+  openEmail() {
+    const subject = `Inquiry Regarding ${this.service}`;
+    const body = `
+      Dear Nirjai Technologies Team,
+  
+      I hope this message finds you well. I recently filled out the "Contact Us" form on your website and wanted to provide my details for further communication regarding the services I am interested in.
+  
+      Here are my details:
+      Name: ${this.firstName} ${this.lastName}
+      Service Type: ${this.service}
+      Industry: ${this.industry}
+      Email: ${this.email}
+      Phone Number: ${this.phone}
+      Description: ${this.description}
+  
+      Please feel free to reach out to me at your earliest convenience. I look forward to discussing how Nirjai Technologies can support my business needs.
+      Thank you for your time and assistance!
+  
+      Best regards,
+      ${this.firstName} ${this.lastName}
+      ${this.email}
+      ${this.phone}
+    `;
+    const mailtoLink = `mailto:varun.garg@nirjai.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;    
+    window.location.href = mailtoLink;
+  }
+  
 
 }

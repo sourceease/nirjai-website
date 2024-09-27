@@ -11,7 +11,7 @@
         <p class="text-justify text-xl">We are –</p>
         <h1 class="pt-4 text-justify font-semibold text-[#ffa500]">Nirjai Technologies Private Limited</h1>
         <h2 class="text-3xl font-bold mt-4">Place, where we pioneer innovative delivery optimization</h2>
-        <p class="text-xl">
+        <p class="text-xl text-gray-600 mt-2">
             Where innovation meets delivery efficiency. We are a dynamic IT startup dedicated to empowering small and
             medium-sized enterprises (SMEs). At Nirjai Technologies, we pride ourselves on our unique approach for
             delivery that blends an accelerator-based delivery model with unique staffing strategies to offer you
@@ -222,7 +222,7 @@
                     <div class=" flex flex-row">
                         <div class="flex items-center justify-center rounded-lg w-16 h-16  mb-4"
                             style="background-color: black">
-                            <img src="../../../assets/nirjai/icon/mis.png" class="h-8 w-8 text-black" fill="none"
+                            <img src="../../../assets/nirjai/icon/mis.svg" class="h-8 w-8 text-black" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                         </div>
                         <div>
@@ -307,31 +307,31 @@
                 <div>
                     <div>
 
-                        <div class="basis-4/6 border lg:border-r-2 lg:border-b-2  border-gray-200">
+                        <div class="basis-4/6 border lg:border-r-2 lg:border-b-2 rounded-md  border-gray-200 h-80">
                             <div class="lg:block hidden">
                                 <div class="flex flex-row divide-x ">
 
                                     <!-- Tabs -->
 
                                     <div [ngClass]="{'active': selectedTab == 1}"
-                                        class="bg-black text-yellow-600 text-center p-4 font-medium text-xl cursor-pointer"
+                                        class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
                                         (click)="chngTech(1)">Web Application Development</div>
                                     <div [ngClass]="{'active': selectedTab == 2}"
-                                        class="bg-black text-yellow-600 text-center p-4 font-medium text-xl cursor-pointer"
+                                        class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
                                         (click)="chngTech(2)">Mobile Application Development</div>
                                     <div [ngClass]="{'active': selectedTab == 3}"
-                                        class="bg-black text-yellow-600 text-center p-4 font-medium text-xl cursor-pointer"
+                                        class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
                                         (click)="chngTech(3)">Middleware
                                         Support</div>
                                     <div [ngClass]="{'active': selectedTab == 4}"
-                                        class="bg-black text-yellow-600 text-center p-4 font-medium text-xl cursor-pointer"
+                                        class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
                                         (click)="chngTech(4)">Business/Artifical
                                         Intelligent</div>
                                     <div [ngClass]="{'active': selectedTab == 5}"
-                                        class="bg-black text-yellow-600 text-center p-4 font-medium text-xl cursor-pointer"
+                                        class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
                                         (click)="chngTech(5)">Automation Frameworks & Tools</div>
                                     <div [ngClass]="{'active': selectedTab == 6}"
-                                        class="bg-black text-yellow-600 text-center p-4 font-medium text-xl cursor-pointer"
+                                        class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
                                         (click)="chngTech(6)">Cloud Based Solution Implementations</div>
                                 </div>
                             </div>
@@ -388,7 +388,7 @@
                             <div class="lg:block hidden">
                                 <div class="flex flex-row gap-[6rem] pt-8 pl-14 pr-8 ">
                                     <div *ngFor="let item of getFilteredTechnologies()">
-                                        <img [src]="item.imageUrl" alt="Icon Not Found">
+                                        <img [src]="item.imageUrl" class="w-12" alt="Icon Not Found">
                                         <h1 class="mt-2 font-medium text-center">{{item.techName}}</h1>
                                     </div>
                                 </div>
@@ -549,31 +549,31 @@
                     </div>
 
                     <div class="w-7/12">
-                        <form class="space-y-4">
+                        <form class="space-y-4" (ngSubmit)="openEmail()">
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label for="firstName" class="block text-sm font-medium text-gray-700">First
                                         Name*</label>
                                     <input type="text" name="firstName" id="firstName"
-                                        class="mt-1 p-2 w-full border rounded-md" required>
+                                        class="mt-1 p-2 w-full border rounded-md" [(ngModel)]="firstName" required>
                                 </div>
                                 <div>
                                     <label for="lastName" class="block text-sm font-medium text-gray-700">Last
                                         Name*</label>
                                     <input type="text" name="lastName" id="lastName"
-                                        class="mt-1 p-2 w-full border rounded-md" required>
+                                        class="mt-1 p-2 w-full border rounded-md" [(ngModel)]="lastName" required>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700">Email id*</label>
                                     <input type="email" name="email" id="email"
-                                        class="mt-1 p-2 w-full border rounded-md" required>
+                                        class="mt-1 p-2 w-full border rounded-md" [(ngModel)]="email" required>
                                 </div>
                                 <div>
                                     <label for="phone" class="block text-sm font-medium text-gray-700">Phone No*</label>
                                     <input type="tel" name="phone" id="phone" class="mt-1 p-2 w-full border rounded-md"
-                                        required>
+                                        [(ngModel)]="phone" required>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 gap-4">
@@ -581,29 +581,44 @@
                                     <label for="service" class="block text-sm font-medium text-gray-700">Select a
                                         service*</label>
                                     <select name="service" id="service" class="mt-1 p-2 w-full border rounded-md"
-                                        required>
+                                        [(ngModel)]="service" required>
                                         <option value="">Select an option</option>
-                                        <option value="option1">Option 1</option>
-                                        <option value="option2">Option 2</option>
+                                        <option value="IT Consulting">IT Consulting</option>
+                                        <option value="Product Design & Ideation">Product Design & Ideation</option>
+                                        <option value="Software Development">Software Development</option>
+                                        <option value="Mobile App Development">Mobile App Development</option>
+                                        <option value="Data Science & Analytics">Data Science & Analytics</option>
+                                        <option value="DevOps">DevOps</option>
+                                        <option value="Cloud SERVICES">Cloud SERVICES</option>
+                                        <option value="Artificial Intelligence & Machine Learning">Artificial
+                                            Intelligence & Machine Learning</option>
+                                        <option value="Competency Development">Competency Development</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label for="industry"
                                         class="block text-sm font-medium text-gray-700">Industry</label>
-                                    <select name="industry" id="industry" class="mt-1 p-2 w-full border rounded-md">
+                                    <select name="industry" id="industry" class="mt-1 p-2 w-full border rounded-md"
+                                        [(ngModel)]="industry">
                                         <option value="">Select an option</option>
-                                        <option value="option1">Option 1</option>
-                                        <option value="option2">Option 2</option>
+                                        <option value="Healthcare">Healthcare</option>
+                                        <option value="Fintech">Fintech</option>
+                                        <option value="E-commerce">E-commerce</option>
+                                        <option value="Consulting">Consulting</option>
+                                        <option value="Retirement Sector">Retirement Sector</option>
+                                        <option value="SaaS">SaaS</option>
+                                        <option value="Others (On-demand)">Others (On-demand)</option>
                                     </select>
                                 </div>
                             </div>
                             <div>
-                                <textarea class="mt-1 p-2 w-full border rounded-md" placeholder="Discription"
-                                    rows="3"></textarea>
+                                <textarea class="mt-1 p-2 w-full border rounded-md" placeholder="Description" rows="3"
+                                    [(ngModel)]="description"></textarea>
                             </div>
-                            <button class="bg-[#FFA500]  font-medium py-2 px-4 rounded">Book your call</button>
+                            <button class="bg-[#FFA500] font-medium py-2 px-4 rounded">Book your call</button>
                         </form>
                     </div>
+
                 </div>
             </div>
 
