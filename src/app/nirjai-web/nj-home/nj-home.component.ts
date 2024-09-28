@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nj-home',
@@ -17,7 +18,7 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
   service = '';
   industry = '';
   description = '';
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {
     this.ovservElement();
@@ -30,6 +31,9 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
         this.scrollToSection(fragment);
       }
     });
+  }
+  navigateToSection(sectionId: string) {
+    this.router.navigate(['/'], { fragment: sectionId });
   }
 
   scrollToSection(sectionId: string) {
