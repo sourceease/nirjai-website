@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nj-footer',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NjFooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+
+  // navigateToSection(sectionId: string) {
+  //   this.router.navigate(['/'], { fragment: sectionId });
+  // }
 
 }

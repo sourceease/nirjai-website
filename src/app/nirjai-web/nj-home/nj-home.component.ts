@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
@@ -18,7 +18,7 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
   service = '';
   industry = '';
   description = '';
-  constructor(private route: ActivatedRoute,private router: Router) { }
+  constructor(private route: ActivatedRoute,private router: Router, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.ovservElement();
@@ -27,6 +27,7 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
 
   ngAfterViewInit() {
     this.route.fragment.subscribe((fragment) => {
+      console.log(fragment);
       if (fragment) {
         this.scrollToSection(fragment);
       }
@@ -83,7 +84,7 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
     { tech: 'automation', techName: 'Cucumber', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a1.png' },
     { tech: 'automation', techName: 'Appium', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a2.png' },
     { tech: 'automation', techName: 'Selenium', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a3.png' },
-    { tech: 'automation', techName: 'Robot Framework', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a4.png' },
+    // { tech: 'automation', techName: 'Robot Framework', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a4.png' },
     { tech: 'automation', techName: 'Mocha', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a5.png' },
     { tech: 'automation', techName: 'Playwrite', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a6.png' },
     { tech: 'automation', techName: 'JMeter', imageUrl: '../../../assets/nirjai/it-staffing/Technologies logo/automation testing/a7.png' },
@@ -103,6 +104,7 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
   }
   chngTechMob($event: any): void {
     this.selectedTab = $event + 1;
+    this.cdr.detectChanges();
   }
 
   getFilteredTechnologies(): { tech: string, imageUrl: string, techName?:string }[] {
@@ -165,7 +167,7 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
       ${this.email}
       ${this.phone}
     `;
-    const mailtoLink = `mailto:varun.garg@nirjai.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;    
+    const mailtoLink = `mailto:info@nirjai.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;    
     window.location.href = mailtoLink;
   }
   

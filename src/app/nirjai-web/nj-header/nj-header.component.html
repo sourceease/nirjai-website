@@ -10,60 +10,65 @@
 
             <!-- Desktop Navbar Links -->
             <div id="navbar-links" class="hidden md:flex space-x-6 mr-10">
-                <a  (click)="navigateToSection('about')" routerLinkActive="font-bold text-xl" class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg text-white">
+                <a (click)="navigateToSection('about')" routerLinkActive="font-bold text-xl"
+                    class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg text-white">
                     About Us
                 </a>
-                <a  (click)="navigateToSection('services')" routerLinkActive="font-bold text-xl" class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg text-white">
+                <a (click)="navigateToSection('services')" routerLinkActive="font-bold text-xl"
+                    class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg text-white">
                     Services
                 </a>
-                <a (click)="navigateToSection('approach')" routerLinkActive="font-bold text-xl" class="hover:underline p-2 roboto-font cursor-pointer flex items-center text-lg text-white">
+                <a (click)="navigateToSection('approach')" routerLinkActive="font-bold text-xl"
+                    class="hover:underline p-2 roboto-font cursor-pointer flex items-center text-lg text-white">
                     Our Approach
                 </a>
-                <a (click)="navigateToSection('it-training')" class="hover:underline p-2 flex items-center text-lg cursor-pointer roboto-font text-white" routerLinkActive="font-bold text-xl" routerLink="/about-us">
+                <a (click)="navigateToSection('it-training')"
+                    class="hover:underline p-2 flex items-center text-lg cursor-pointer roboto-font text-white"
+                    routerLinkActive="font-bold text-xl" routerLink="/about-us">
                     IT Training
                 </a>
-                <a (click)="navigateToSection('contact-us')" class="hover:underline p-2 flex items-center text-lg cursor-pointer roboto-font text-white" routerLinkActive="font-bold text-xl" routerLink="/about-us">
+                <a (click)="navigateToSection('contact-us')"
+                    class="hover:underline p-2 flex items-center text-lg cursor-pointer roboto-font text-white"
+                    routerLinkActive="font-bold text-xl" routerLink="/about-us">
                     Contact Us
                 </a>
             </div>
 
-            <!-- Hamburger Menu (visible on small screens) -->
-            <button class="md:hidden focus:outline-none" (click)="openHmbg()">
-                <mat-icon class="icon-size-8">menu</mat-icon>
+               <!-- Hamburger menu icon (visible on small screens) [matMenuTriggerFor]="menu" -->
+               <button class="md:hidden focus:outline-none " mat-button (click)="openHmbg()">
+                <mat-icon class="icon-size-8 text-white">menu</mat-icon>
             </button>
         </div>
     </div>
 </header>
 
-<!-- Mobile Navigation Menu -->
-<div [ngClass]="{'left-0': hmbrOpen, 'left-[-100%]': !hmbrOpen}" class="w-full h-screen  bg-white top-0 left-0 transition-all md:hidden z-50">
+<!-- for mobile screen menu -->
+
+
+
+<div [ngClass]="{'left-0': hmbrOpen, 'left-[-100%]': !hmbrOpen}" class="w-full h-[20rem] absolute  bg-white top-20 left-0 transition-all md:hidden z-50">
     <div class="flex flex-col space-y-4 p-4">
-        <button routerLinkActive="font-bold text-indigo-900" routerLink="/home" (click)="openHmbg()" class="text-xl" mat-menu-item>
-            <mat-icon class="icon-size-8">home</mat-icon> Home
+        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('about')" class="text-xl font-bold" mat-menu-item>
+            <!-- <mat-icon class="icon-size-8">home</mat-icon>  -->
+            About Us
         </button>
-        <button routerLinkActive="font-bold text-indigo-900" routerLink="/about-us" (click)="openHmbg()" class="text-xl" mat-menu-item>
-            <mat-icon class="icon-size-8">group</mat-icon> About Us
+        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('services')" class="text-xl font-bold" mat-menu-item>
+            <!-- <mat-icon class="icon-size-8">group</mat-icon> -->
+            Services
+        </button>
+        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('approach')" class="text-xl font-bold " mat-menu-item>
+            <!-- <mat-icon class="icon-size-8">group</mat-icon> -->
+            Our Approach
+        </button>
+        <button routerLinkActive="font-bold text-indigo-900"  (click)="openHmbg();navigateToSection('it-training')" class="text-xl font-bold" mat-menu-item>
+            <!-- <mat-icon class="icon-size-8">group</mat-icon> -->
+            IT Training
         </button>
 
-        <!-- Services with sub-menu -->
-        <div class="flex flex-col">
-            <button class="text-xl" mat-menu-item>
-                <mat-icon class="icon-size-8">hub</mat-icon> Services
-            </button>
-            <ul class="flex flex-col pl-12">
-                <li>
-                    <button routerLink="/it-staffing" routerLinkActive="font-bold text-indigo-900" (click)="openHmbg()" mat-menu-item>IT Staffing</button>
-                </li>
-                <li>
-                    <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg()" mat-menu-item>
-                        <a href="https://www.urjobmart.com/ujm/website/home" target="_blank">Recruiters Solutions</a>
-                    </button>
-                </li>
-            </ul>
-        </div>
-
-        <button routerLinkActive="font-bold text-indigo-900" routerLink="/contact-us" (click)="openHmbg()" class="text-xl" mat-menu-item>
-            <mat-icon class="icon-size-8">call</mat-icon> Contact Us
+        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('contact-us')" class="text-xl font-bold" mat-menu-item>
+            <!-- <mat-icon class="icon-size-8">call</mat-icon> -->
+             Contact Us
         </button>
     </div>
 </div>
+

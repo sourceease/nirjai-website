@@ -1,4 +1,3 @@
-
 * {
     // margin: 0;
     // padding: 0;
@@ -13,7 +12,7 @@
 
 .innerContainer {
     max-width: 100%;
-    width: 96%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -29,20 +28,22 @@
     align-items: center;
     justify-content: center;
 }
+
 .callbackButton {
-    background-color: #ffa500; 
-    color: white; 
-    font-size: 18px; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s; 
+    background-color: #ffa500;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     margin-bottom: 10vh;
 }
 
 .callbackButton:hover {
-    background-color: #ff8c00; /* Darker shade on hover */
+    background-color: #ff8c00;
+    /* Darker shade on hover */
 }
 
 .bgTxt {
@@ -228,9 +229,10 @@
     }
 
     .bgTxt {
-        font-size: 40px;
+        font-size: 18px;
         width: 23rem;
         line-height: normal;
+        margin-bottom: 2vh;
     }
 
     // mobMain.png
@@ -254,6 +256,11 @@
         max-width: 100%;
         width: 90%;
         margin: 0 auto;
+    }
+
+    .callbackButton {
+        font-size: 14px;
+        padding: 4px 8px;
     }
 }
 

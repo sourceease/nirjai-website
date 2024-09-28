@@ -16,6 +16,7 @@ export class NjHeaderComponent implements OnInit {
   ngOnInit(): void { }
   openHmbg() {
     this.hmbrOpen = !this.hmbrOpen;
+    console.log(this.hmbrOpen)
   }
 
   navigateToSection(sectionId: string) {
