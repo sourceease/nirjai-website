@@ -9,7 +9,7 @@
             </div>
 
             <!-- Desktop Navbar Links -->
-            <div id="navbar-links" class="hidden md:flex space-x-6 mr-10">
+            <div id="navbar-links" class="hidden lg:flex space-x-6 mr-10">
                 <a (click)="navigateToSection('about')" routerLinkActive="font-bold text-xl"
                     class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg text-white">
                     About Us
@@ -35,7 +35,7 @@
             </div>
 
                <!-- Hamburger menu icon (visible on small screens) [matMenuTriggerFor]="menu" -->
-               <button class="md:hidden focus:outline-none " mat-button (click)="openHmbg()">
+               <button class="lg:hidden focus:outline-none " mat-button (click)="openHmbg()">
                 <mat-icon class="icon-size-8 text-white">menu</mat-icon>
             </button>
         </div>
@@ -46,7 +46,7 @@
 
 
 
-<div [ngClass]="{'left-0': hmbrOpen, 'left-[-100%]': !hmbrOpen}" class="w-full h-[20rem] absolute  bg-white top-20 left-0 transition-all md:hidden z-50">
+<div [ngClass]="{'left-0': hmbrOpen, 'left-[-100%]': !hmbrOpen}" class="w-full h-[20rem] absolute  bg-white top-20 left-0 transition-all lg:hidden z-50">
     <div class="flex flex-col space-y-4 p-4">
         <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('about')" class="text-xl font-bold" mat-menu-item>
             <!-- <mat-icon class="icon-size-8">home</mat-icon>  -->
