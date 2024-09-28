@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nj-footer',
@@ -8,12 +8,16 @@ import { Router } from '@angular/router';
 })
 export class NjFooterComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
+  openEmail() {
 
+    const mailtoLink = `mailto:info@nirjai.com`;    
+    window.location.href = mailtoLink;
+  }
   // navigateToSection(sectionId: string) {
   //   this.router.navigate(['/'], { fragment: sectionId });
   // }

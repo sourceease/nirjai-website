@@ -269,3 +269,21 @@
         height: 33rem !important;
     }
 }
+.active {
+    color: #000 !important;
+    background-color: #ffa807 !important;
+    border-top: 2px solid rgba(128, 128, 128, 0.371);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.371);
+}
+
+
+::ng-deep .mat-tab-label-content {
+    color: #ffa807 !important;
+}
+
+::ng-deep .mat-tab-header-pagination-chevron {
+    border-color: #ffa807 !important;
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #ffa807  !important;
+}
