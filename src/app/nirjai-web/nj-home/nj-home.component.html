@@ -10,7 +10,7 @@
     <div class="bg-white z-10">
         <div class="innerContainer z-10  ">
             <div class="pt-4 text-2xl text-justify Poppins-font" id="about">
-                <h2 class="lg:text-3xl text-base font-bold lg:mt-4">About us</h2>
+                <h2 class="lg:text-3xl text-lg font-bold lg:mt-4">About us</h2>
                 <!-- <p class="text-justify text-xl">We are –</p>
                 <h1 class="pt-4 text-justify font-semibold text-[#ffa500]">Nirjai Technologies Private Limited</h1>
                 <h2 class="text-3xl font-bold mt-4">Place, where we pioneer innovative delivery optimization</h2> -->
@@ -32,8 +32,8 @@
             <!-- services.component.html -->
             <div class="container mx-auto">
                 <!-- <h2 class="text-3xl font-bold mt-4 pl-14">Navigate the digital frontier with our engineering excellence</h2> -->
-                <section class="lg:py-16 py-5" id="services">
-                    <h2 class="text-base lg:text-3xl font-bold lg:mt-4">Navigate the digital frontier with our engineering
+                <section class="lg:py-10 py-5" id="services">
+                    <h2 class="text-lg lg:text-3xl font-bold lg:mt-4">Navigate the digital frontier with our engineering
                         excellence
                     </h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:py-10 py-3">
@@ -235,7 +235,7 @@
                 </div>
             </div> -->
                 <div id="approach">
-                    <h2 class="lg:text-3xl text-base font-bold">Our Approach</h2>
+                    <h2 class="lg:text-3xl text-lg font-bold">Our Approach</h2>
                     <p class="text-justify lg:text-xl lg:mt-3 mt-1 lg:font-bold sm:text-gray-600">Our approach is designed to provide comprehensive
                         solutions
                         that are
@@ -336,11 +336,10 @@
                     <!-- supporting Tech -->
                     <div>
                         <h2 class="lg:text-2xl text-base font-bold mb-5">Expertise In Technologies</h2>
-                        <div>
-                            <div>
+                 
 
                                 <div
-                                    class="basis-4/6 border lg:border-r-2 lg:border-b-2 rounded-md  border-gray-200 h-96 lg:h-80">
+                                    class="basis-4/6 border lg:border-r-2 lg:border-b-2 rounded-md  border-gray-200 h-auto min-h-[30rem] lg:h-80">
                                     <div class="lg:block hidden">
                                         <div class="flex flex-row divide-x ">
 
@@ -369,51 +368,18 @@
                                         </div>
                                     </div>
 
-                                    <div class="lg:hidden block mt-6 mb-6">
-                                        <mat-tab-group class="snap-x" (selectedIndexChange)="chngTechMob($event)">
-                                            <mat-tab class="snap-center" label="Web Application Development">
-                                                <div class="flex flex-row gap-12 pt-8 pl-2 flex-wrap">
-                                                    <div *ngFor="let item of getFilteredTechnologies()">
-                                                        <!-- <img class="w-20" [src]="item.imageUrl" alt="Icon Not Found"> -->
-                                                    </div>
-                                                </div>
-                                            </mat-tab>
-                                            <mat-tab class="snap-center" label="Mobile Application Development">
-                                                <div class="flex flex-row gap-12 pt-8 pl-2 flex-wrap">
-                                                    <div *ngFor="let item of getFilteredTechnologies()">
-                                                        <img class="w-20" [src]="item.imageUrl" alt="Icon Not Found">
-                                                    </div>
-                                                </div>
-                                            </mat-tab>
-                                            <mat-tab class="snap-center" label="Middleware Support">
-                                                <div class="flex flex-row gap-12 pt-8 pl-2 flex-wrap">
-                                                    <div *ngFor="let item of getFilteredTechnologies()">
-                                                        <img class="w-20" [src]="item.imageUrl" alt="Icon Not Found">
-                                                    </div>
-                                                </div>
-                                            </mat-tab>
-                                            <mat-tab class="snap-center" label="Business/Artifical Intelligent">
-                                                <div class="flex flex-row gap-12 pt-8 pl-2 flex-wrap">
-                                                    <div *ngFor="let item of getFilteredTechnologies()">
-                                                        <img class="w-20" [src]="item.imageUrl" alt="Icon Not Found">
-                                                    </div>
-                                                </div>
-                                            </mat-tab>
-                                            <mat-tab class="snap-center" label="Automation Frameworks & Tools">
-                                                <div class="flex flex-row gap-12 pt-8 pl-2 flex-wrap">
-                                                    <div *ngFor="let item of getFilteredTechnologies()">
-                                                        <img class="w-20" [src]="item.imageUrl" alt="Icon Not Found">
-                                                    </div>
-                                                </div>
-                                            </mat-tab>
-                                            <mat-tab class="snap-center" label="Cloud Based Solution Implementations">
-                                                <div class="flex flex-row gap-12 pt-8 pl-2 flex-wrap">
-                                                    <div *ngFor="let item of getFilteredTechnologies()">
-                                                        <img class="w-20" [src]="item.imageUrl" alt="Icon Not Found">
-                                                    </div>
-                                                </div>
-                                            </mat-tab>
-                                        </mat-tab-group>
+                                    <div class="flex justify-between items-center mt-6 mb-6 lg:hidden">
+                                        <button class="arrow-button left-arrow rounded" (click)="prevTab()">
+                                            <img src="../../../../../../../../assets/nirjai/icon/left.png" alt="Nirjai Technologies Logo" class="w-5 h-5">
+                                        </button>
+                                    
+                                        <div class="current-tab flex justify-center items-center min-h-16  flex-grow text-center bg-[#ffa807] py-2 px-4 font-bold text-black">
+                                            {{ getCurrentTabName() }}
+                                        </div>
+                                    
+                                        <button class="arrow-button right-arrow rounded-sm " (click)="nextTab()">
+                                            <img src="../../../../../../../../assets/nirjai/icon/right.png" alt="Nirjai Technologies Logo" class="w-5 h-5">
+                                        </button>
                                     </div>
 
                                     <!-- Content -->
@@ -428,21 +394,23 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
+         
 
                     </div>
                     <!--  -->
 
                     <div id="it-training">
-                        <h2 class="lg:text-2xl text-base font-bold lg:mt-10 mt-4">IT Training Program</h2>
+                        <h2 class="lg:text-2xl text-base font-bold lg:mt-10 mt-4 hidden md:block">IT Training Program</h2>
                         <div class=" flex flex-col lg:flex-row lg:mt-5 mt-2">
-                            <div class="flex items-center justify-center mb-4 rounded-lg"
-                                style="background-color: black">
-                                <img src="../../../assets/nirjai/icon/5man.png" class="h text-black" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
+                            <div class="flex lg:items-center lg:justify-center mt-5">
+                                <h2 class="order-2 lg:text-2xl text-base font-bold mt-10 block md:hidden ml-3">IT Training Program</h2>
+                                <div class="order-1 flex items-center justify-center mb-4 rounded-lg w-16"
+                                    >
+                                    <img src="../../../assets/nirjai/icon/5man.png" class=" text-black" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                </div>
                             </div>
+                           
                             <div class="ml-4 text-gray-600  mt-4">
                                 <p>We have launched an IT training program to address the skills gap in the competitive
                                     IT
@@ -587,12 +555,14 @@
                     </section>
                     <!-- img-end  -------------------------------------------------------------------------->
                     <!-- contactus-start -->
-                    <div class="" id="contact-us">
-                        <h2 class="lg:text-3xl text-base font-bold  text-gray-800 mb-6">Our team is always ready to connect with you
+                    <div class="" id="contact-us">  
+                        <h2 class="lg:text-3xl text-lg font-bold hidden md:block text-gray-800 mb-6">Our team is always ready to connect with you
                         </h2>
-                        <div class=" flex flex-col md:flex-row gap-16 w-full">
-                            <div class="flex items-center justify-center mb-8">
-                                <div class="bg-gray-800 w-36 h-36 rounded-full flex items-center justify-center">
+                        <div class=" flex flex-col md:flex-row lg:gap-16 w-full">
+                            <div class="flex lg:items-center lg:justify-center mb-8">
+                                <h2 class="lg:text-3xl order-2 text-lg font-bold block md:hidden text-gray-800 text-justify mt-2 ml-3">Our team is always ready to connect with you
+                                </h2>
+                                <div class="order-1 lg:w-36 lg:h-36 h-16 w-16 rounded-full flex items-center justify-center">
                                     <div class="items-center justify-center rounded-lg" style="background-color: black">
                                         <img src="../../../assets/nirjai/icon/cont.png" class="rounded-lg text-black"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">

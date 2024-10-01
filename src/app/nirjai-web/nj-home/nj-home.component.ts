@@ -107,24 +107,67 @@ export class NjHomeComponent implements OnInit, AfterViewInit  {
     this.cdr.detectChanges();
   }
 
-  getFilteredTechnologies(): { tech: string, imageUrl: string, techName?:string }[] {
-    switch (this.selectedTab) {
-      case 1:
-        return this.technologiesIcon.filter(item => item.tech === 'web');
-      case 2:
-        return this.technologiesIcon.filter(item => item.tech === 'mobile');
-      case 3:
-        return this.technologiesIcon.filter(item => item.tech === 'middleware');
-      case 4:
-        return this.technologiesIcon.filter(item => item.tech === 'business');
-      case 5:
-        return this.technologiesIcon.filter(item => item.tech === 'automation');
-      case 6:
-        return this.technologiesIcon.filter(item => item.tech === 'cloud');
-      default:
-        return [];
-    }
+
+  prevTab(): void {
+      if (this.selectedTab > 1) {
+          this.selectedTab--;
+      } else {
+          this.selectedTab = 6; 
+      }
+      this.updateContent();
   }
+  
+  nextTab(): void {
+      if (this.selectedTab < 6) {
+          this.selectedTab++;
+      } else {
+          this.selectedTab = 1;
+      }
+      this.updateContent();
+  }
+  
+  updateContent(): void {
+      this.cdr.detectChanges(); 
+  }
+  
+  getCurrentTabName(): string {
+      switch (this.selectedTab) {
+          case 1:
+              return 'Web Application Development';
+          case 2:
+              return 'Mobile Application Development';
+          case 3:
+              return 'Middleware Support';
+          case 4:
+              return 'Business/Artificial Intelligent';
+          case 5:
+              return 'Automation Frameworks & Tools';
+          case 6:
+              return 'Cloud Based Solution Implementations';
+          default:
+              return '';
+      }
+  }
+  
+  getFilteredTechnologies(): { tech: string, imageUrl: string, techName?: string }[] {
+      switch (this.selectedTab) {
+          case 1:
+              return this.technologiesIcon.filter(item => item.tech === 'web');
+          case 2:
+              return this.technologiesIcon.filter(item => item.tech === 'mobile');
+          case 3:
+              return this.technologiesIcon.filter(item => item.tech === 'middleware');
+          case 4:
+              return this.technologiesIcon.filter(item => item.tech === 'business');
+          case 5:
+              return this.technologiesIcon.filter(item => item.tech === 'automation');
+          case 6:
+              return this.technologiesIcon.filter(item => item.tech === 'cloud');
+          default:
+              return [];
+      }
+  }
+  
 
   ovservElement() {
     this.observer = new IntersectionObserver((entries) => {

@@ -3,40 +3,40 @@
         <div class="container lg:mx-auto flex items-center justify-between">
             <div class="flex items-center">
                 <!-- Logo (visible on all screens) -->
-                <div routerLink="/sourceease/website/home">
-                    <img class="lg:w-44 w-[13rem]" src="../../../../../../../../assets/nirjai/home/logo.png" alt="Logo">
+                <div>
+                    <img class="lg:w-44 w-[10rem] lg:ml-0 ml-3" src="../../../../../../../../assets/nirjai/home/logo.png" alt="Logo">
                 </div>
             </div>
 
             <!-- Desktop Navbar Links -->
             <div id="navbar-links" class="hidden lg:flex space-x-6 mr-10">
-                <a (click)="navigateToSection('about')" routerLinkActive="font-bold text-xl"
+                <a (click)="navigateToSection('about')" routerLinkActive="font-bold text-sm"
                     class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg text-white">
                     About Us
                 </a>
-                <a (click)="navigateToSection('services')" routerLinkActive="font-bold text-xl"
+                <a (click)="navigateToSection('services')" routerLinkActive="font-bold text-sm"
                     class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg text-white">
                     Services
                 </a>
-                <a (click)="navigateToSection('approach')" routerLinkActive="font-bold text-xl"
+                <a (click)="navigateToSection('approach')" routerLinkActive="font-bold text-sm"
                     class="hover:underline p-2 roboto-font cursor-pointer flex items-center text-lg text-white">
                     Our Approach
                 </a>
                 <a (click)="navigateToSection('it-training')"
                     class="hover:underline p-2 flex items-center text-lg cursor-pointer roboto-font text-white"
-                    routerLinkActive="font-bold text-xl" routerLink="/about-us">
+                    routerLinkActive="font-bold text-sm" routerLink="/about-us">
                     IT Training
                 </a>
                 <a (click)="navigateToSection('contact-us')"
                     class="hover:underline p-2 flex items-center text-lg cursor-pointer roboto-font text-white"
-                    routerLinkActive="font-bold text-xl" routerLink="/about-us">
+                    routerLinkActive="font-bold text-sm" routerLink="/about-us">
                     Contact Us
                 </a>
             </div>
 
                <!-- Hamburger menu icon (visible on small screens) [matMenuTriggerFor]="menu" -->
                <button class="lg:hidden focus:outline-none " mat-button (click)="openHmbg()">
-                <mat-icon class="icon-size-8 text-white">menu</mat-icon>
+                <mat-icon class="icon-size-15 text-white">menu</mat-icon>
             </button>
         </div>
     </div>
@@ -45,30 +45,38 @@
 <!-- for mobile screen menu -->
 
 
-
-<div [ngClass]="{'left-0': hmbrOpen, 'left-[-100%]': !hmbrOpen}" class="w-full h-[20rem] absolute  bg-white top-20 left-0 transition-all lg:hidden z-50">
-    <div class="flex flex-col space-y-4 p-4">
-        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('about')" class="text-xl font-bold" mat-menu-item>
-            <!-- <mat-icon class="icon-size-8">home</mat-icon>  -->
-            About Us
+<div [ngClass]="{'right-0': hmbrOpen, 'right-[-100%]': !hmbrOpen}" class=" h-screen absolute bg-black top-0 transition-all lg:hidden z-50 text-[#ffa807] font-[Poppins]">
+    <div class="flex items-center px-4 py-4">
+        <button (click)="openHmbg()" class="text-2xl text-[#ffa807]">
+            <mat-icon class="icon-size-8">arrow_back</mat-icon>
         </button>
-        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('services')" class="text-xl font-bold" mat-menu-item>
-            <!-- <mat-icon class="icon-size-8">group</mat-icon> -->
+        <span class="text-lg ml-4">Navigations</span>
+    </div>
+    <div class="flex flex-col space-y-6 p-6">
+        <button (click)="openHmbg();navigateToSection('about')" class="flex items-center text-lg" mat-menu-item>
+            <img src="../../../../../../../../assets/nirjai/icon/Home.png" alt="Nirjai Technologies Logo" class="mr-4">
+            Home
+        </button>
+        <button (click)="openHmbg();navigateToSection('services')" class="flex items-center text-lg " mat-menu-item>
+            <img src="../../../../../../../../assets/nirjai/icon/services.png" alt="Nirjai Technologies Logo" class="mr-4">
             Services
         </button>
-        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('approach')" class="text-xl font-bold " mat-menu-item>
-            <!-- <mat-icon class="icon-size-8">group</mat-icon> -->
+        <button (click)="openHmbg();navigateToSection('approach')" class="flex items-center text-lg " mat-menu-item>
+            <img src="../../../../../../../../assets/nirjai/icon/our.png" alt="Nirjai Technologies Logo" class="mr-4">
             Our Approach
         </button>
-        <button routerLinkActive="font-bold text-indigo-900"  (click)="openHmbg();navigateToSection('it-training')" class="text-xl font-bold" mat-menu-item>
-            <!-- <mat-icon class="icon-size-8">group</mat-icon> -->
-            IT Training
+        <button (click)="openHmbg();navigateToSection('it-training')" class="flex items-center text-lg" mat-menu-item>
+            <img src="../../../../../../../../assets/nirjai/icon/itTraning.png" alt="Nirjai Technologies Logo" class="mr-4">
+            IT Training Program
         </button>
-
-        <button routerLinkActive="font-bold text-indigo-900" (click)="openHmbg();navigateToSection('contact-us')" class="text-xl font-bold" mat-menu-item>
-            <!-- <mat-icon class="icon-size-8">call</mat-icon> -->
-             Contact Us
+        <button (click)="openHmbg();navigateToSection('contact-us')" class="flex items-center text-lg" mat-menu-item>
+            <img src="../../../../../../../../assets/nirjai/icon/cus.png" alt="Nirjai Technologies Logo" class="mr-4">
+            Contact Us
         </button>
     </div>
+    <div class="border-t border-solid border-[#ffa807] mr-14 ml-14" >
+    </div>
+    <div class="mt-10 flex justify-center pb-8">
+        <img src="../../../../../../../../assets/nirjai/home/logo.png" alt="Nirjai Technologies Logo" class="h-16">
+    </div>
 </div>
-
