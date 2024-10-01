@@ -277,15 +277,9 @@
 
 .arrow-button img {
     width: 20px;
-}s
-
-.active {
-    color: #000 !important;
-    background-color: #ffa807 !important;
-    border-top: 2px solid rgba(128, 128, 128, 0.371);
-    border-bottom: 2px solid rgba(128, 128, 128, 0.371);
 }
 
+/* This would go in your global styles file */
 ::ng-deep .mat-tab-label-content {
     color: #ffa807 !important;
 }
@@ -295,9 +289,16 @@
 }
 
 ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
-::ng-deep .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: #ffa807 !important;
 }
+.active {
+    color: #000 !important;
+    background-color: #ffa807 !important;
+    border-top: 2px solid rgba(128, 128, 128, 0.371);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.371);
+}
+
 .arrow-button {
     background-color: #000;
     border: none;
