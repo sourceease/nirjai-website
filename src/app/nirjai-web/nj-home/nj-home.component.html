@@ -1,22 +1,22 @@
 <div class="container bg-white font-[Poppins]">
     <div class="mainBg parallax">
         <div class="lg:w-[84%] mt-12 lg:m-auto flex flex-col items-center justify-end h-full">
-            <div class="bgTxt poppins">"Empowering small and medium-sized enterprises (SMEs) with Innovative IT and
+            <div class="bgTxt poppins" id="about">"Empowering small and medium-sized enterprises (SMEs) with Innovative IT and
                 Engineering Solutions."</div>
-            <button class="callbackButton" (click)="navigateToSection('contact-us')">Book Your Call</button>
+            <button class="callbackButton" (click)="navigateToSection('contact-us')" >Book Your Call</button>
         </div>
     </div>
 
-    <div class="bg-white z-10">
+    <div class="bg-white z-10" >
         <div class="innerContainer z-10  ">
-            <div class="pt-4 text-2xl text-justify Poppins-font" id="about">
+            <div class="pt-4 text-2xl text-justify Poppins-font" >
                 <h2 class="lg:text-3xl text-lg font-bold lg:mt-4">About us</h2>
                 <!-- <p class="text-justify text-xl">We are –</p>
                 <h1 class="pt-4 text-justify font-semibold text-[#ffa500]">Nirjai Technologies Private Limited</h1>
                 <h2 class="text-3xl font-bold mt-4">Place, where we pioneer innovative delivery optimization</h2> -->
                 <p class="text-sm lg:text-xl text-gray-600 mt-2">Welcome to Nirjai Technologies Private Limited, where
                     we <span class="font-bold">innovate continuously to optimize your solution delivery</span></p>
-                <p class="text-sm lg:text-xl text-gray-600 mt-5">
+                <p class="text-sm lg:text-xl text-gray-600 mt-5" id="services">
                     We are a dynamic IT startup dedicated to empowering small and
                     medium-sized enterprises (SMEs). At Nirjai Technologies, we pride ourselves on our unique approach
                     for
@@ -32,7 +32,7 @@
             <!-- services.component.html -->
             <div class="container mx-auto">
                 <!-- <h2 class="text-3xl font-bold mt-4 pl-14">Navigate the digital frontier with our engineering excellence</h2> -->
-                <section class="lg:py-10 py-5" id="services">
+                <section class="lg:py-10 py-5" >
                     <h2 class="text-lg lg:text-3xl font-bold lg:mt-4">Navigate the digital frontier with our engineering
                         excellence
                     </h2>
@@ -215,7 +215,7 @@
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 </div>
                                 <h3 class="lg:text-xl text-base mb-2 font-semibold text-gray-800 lg:mb-4">Competency Development</h3>
-                                <p class="text-gray-600">
+                                <p class="text-gray-600" id="approach">
                                     Enhance your team’s capabilities with our workforce enhancement services. We provide
                                     skilled
                                     professionals to seamlessly fill gaps and support your projects, ensuring efficiency
@@ -234,7 +234,7 @@
         
                 </div>
             </div> -->
-                <div id="approach">
+                <div >
                     <h2 class="lg:text-3xl text-lg font-bold">Our Approach</h2>
                     <p class="text-justify lg:text-xl lg:mt-3 mt-1 lg:font-bold sm:text-gray-600">Our approach is designed to provide comprehensive
                         solutions
@@ -334,7 +334,7 @@
                         </div>
                     </div> -->
                     <!-- supporting Tech -->
-                    <div>
+                    <div >
                         <h2 class="lg:text-2xl text-base font-bold mb-5">Expertise In Technologies</h2>
                  
 
@@ -345,9 +345,9 @@
 
                                             <!-- Tabs -->
 
-                                            <div [ngClass]="{'active': selectedTab == 1}"
+                                            <div [ngClass]="{'active': selectedTab == 1} "
                                                 class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
-                                                (click)="chngTech(1)">Web Application Development</div>
+                                                (click)="chngTech(1)" >Web Application Development</div>
                                             <div [ngClass]="{'active': selectedTab == 2}"
                                                 class="bg-black text-[#ffa807] text-center p-4 font-medium text-base cursor-pointer"
                                                 (click)="chngTech(2)">Mobile Application Development</div>
@@ -384,7 +384,7 @@
 
                                     <!-- Content -->
                                     <!-- lg:block hidden -->
-                                    <div class="">
+                                    <div class="" id="it-training">
                                         <div
                                             class="flex flex-row flex-wrap gap-12 lg:gap-[6rem] pt-3 lg:pt-8 lg:pl-14 pl-4 lg:pr-8 pr-4">
                                             <div *ngFor="let item of getFilteredTechnologies()">
@@ -399,7 +399,7 @@
                     </div>
                     <!--  -->
 
-                    <div id="it-training" class="lg:mt-0 mt-12">
+                    <div  class="lg:mt-0 mt-12">
                         <h2 class="lg:text-2xl text-base font-bold lg:mt-10 mt-4 hidden md:block">IT Training Program</h2>
                         <div class=" flex flex-col lg:flex-row lg:mt-5 mt-2">
                             <div class="flex lg:items-center lg:justify-center mt-5">
@@ -411,7 +411,7 @@
                                 </div>
                             </div>
                            
-                            <div class=" text-gray-600  mt-4">
+                            <div class=" text-gray-600  mt-4 lg:ml-5">
                                 <p>We have launched an IT training program to address the skills gap in the competitive
                                     IT
                                     industry. This 4-Month program provides mentorship from experts, Skills development,
