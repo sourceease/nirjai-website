@@ -11,13 +11,15 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import { MatRippleModule } from '@angular/material/core';
+import { NjItTraningComponent } from './nirjai-web/nj-home/nj-it-traning/nj-it-traning.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NjHeaderComponent,
     NjFooterComponent,
-    NjHomeComponent
+    NjHomeComponent,
+    NjItTraningComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+* {
+    // margin: 0;
+    // padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+// .innerContainer {
+//     max-width: 100%;
+//     width: 80%;
+//     margin: 0 auto;
+// }
+.w{
+    width: 90%;
+}
+// .width{
+//     width: 80%; 
+// }
+.custom-bullet li::marker {
+    color: #ffa807; 
+    font-size: 25px;
+}
