@@ -1,56 +1,20 @@
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
-@Component({
-  selector: 'app-nj-it-traning',
-  templateUrl: './nj-it-traning.component.html',
-  styleUrls: ['./nj-it-traning.component.scss']
-})
-export class NjItTraningComponent implements OnInit, AfterViewInit {
-  @Input() scrollThreshold2: boolean | undefined;
+import { Component, OnInit } from '@angular/core';
 
-  constructor(private route: ActivatedRoute,private router: Router, private cdr: ChangeDetectorRef) { }
+@Component({
+  selector: 'app-it-program',
+  templateUrl: './it-program.component.html',
+  styleUrls: ['./it-program.component.scss']
+})
+export class ItProgramComponent implements OnInit {
+
+  constructor() { }
   formData = {
     fullName: '',
     email: '',
     phone: '',
     interest: '',
-    description: ''
-  };
-  selectedLink: string = '';
-
-  ngOnInit(): void {
-
-  }
-
-  ngAfterViewInit() {
-    this.route.fragment.subscribe((fragment) => {
-      console.log(fragment);
-      if (fragment) {
-        this.scrollToSection(fragment);
-      }
-    });
-  }
-  navigateToSection(sectionId: string) {
-    this.router.navigate(['/'], { fragment: sectionId });
-  }
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-  selectLink(link: string) {
-    this.selectedLink = link;
-        if (link === 'Aarambh-Program') {
-      this.router.navigate([`/${link}`]);
-    } else {
-      this.navigateToSection(link);
-    }
-  
   }
   sendEmail() {
-    
     const subject = 'Thank You for Your Interest in Our IT Training Program!';
     const body = `
       Dear ${this.formData.fullName},
@@ -74,4 +38,7 @@ export class NjItTraningComponent implements OnInit, AfterViewInit {
     const mailtoLink = `mailto:${this.formData.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   }
+  ngOnInit(): void {
+  }
+
 }

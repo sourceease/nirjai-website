@@ -12,6 +12,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import { MatRippleModule } from '@angular/material/core';
 import { NjItTraningComponent } from './nirjai-web/nj-home/nj-it-traning/nj-it-traning.component';
+import { ItProgramComponent } from './nirjai-web/nj-home/it-program/it-program.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NjItTraningComponent } from './nirjai-web/nj-home/nj-it-traning/nj-it-t
     NjHeaderComponent,
     NjFooterComponent,
     NjHomeComponent,
-    NjItTraningComponent
+    NjItTraningComponent,
+    ItProgramComponent
   ],
   imports: [
     BrowserModule,

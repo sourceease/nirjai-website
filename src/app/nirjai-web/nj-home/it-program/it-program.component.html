@@ -1,0 +1,593 @@
+<div class="container bg-white font-[Poppins]">
+    <!-- link section start -->
+    <div class="py-6  text-base text-center ">
+        <div class="bg-[#ffa807] p-2 ">
+            <p>Join our upcoming batch <span class="font-medium"> Aarambh Fellowship Program</span> <span
+                    class="pl-4 font-semibold cursor-pointer">CLICK HERE</span></p>
+        </div>
+    </div>
+    <!------------------------- link section end ---------------------------------->
+    <!------------------------- image section start ---------------------------------->
+    <div class="lg:px-[180px] px-4">
+        <section class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 py-3 blocks">
+
+                <div>
+                    <div class=" mb-10">
+                        <p class="text-3xl font-semibold sm:text-justify">Every step should be taken
+                            towards<br>excellence.... </p>
+                </div>
+                <div class="max-w-sm md:mx-10 mx-auto p-6 bg-orange-50 rounded-lg shadow-lg">
+                    <form class="space-y-2">
+                        <div>
+                            <label for="interest" class="block text-sm font-medium text-gray-700">Your Interest*</label>
+                            <select id="interest" name="interest" class="mt-1 p-2 w-full border rounded-md" [(ngModel)]="formData.interest" required>
+                                <option value="" disabled>Select an interest</option>
+                                <option>Web & Mobile Development</option>
+                                <option>QA & Automation</option>
+                                <option>Cloud & DevOps</option>
+                                <option>Database Management</option>
+                                <option>Data Science & Analytics</option>
+                                <option>Full-stack Development</option>
+                                </select>
+                        </div>
+                
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-gray-700">Your Full Name*</label>
+                            <input type="text" name="name" id="name" class="mt-1 p-2 w-full border rounded-md" [(ngModel)]="formData.fullName" required>
+                        </div>
+                
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Your Email Address*</label>
+                            <input type="email" name="email" id="email" class="mt-1 p-2 w-full border rounded-md" [(ngModel)]="formData.email" required>
+                        </div>
+                
+                        <div>
+                            <label for="contact" class="block text-sm font-medium text-gray-700">Your Contact Number*</label>
+                            <input type="text" name="contact" id="contact" class="mt-1 p-2 w-full border rounded-md" [(ngModel)]="formData.phone" required>
+                        </div>
+                
+                        <div class="pt-4">
+                            <button type="button" (click)="sendEmail()" class="w-full px-4 py-2 bg-[#ffa807] text-white font-bold rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-[#ffa807]">
+                                I am interested
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                </div>
+                <div class="block md:hidden">
+                    <img src="../../../assets/nirjai/it-traning/it-p1.png" class="w" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+
+                </div>
+                <div class="hidden md:block">
+                    <img src="../../../assets/nirjai/it-traning/it-p.png" class="w" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+
+                </div>
+                <div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- end imeage section -->
+    <!-- text-start -->
+    <div class="text-justify lg:px-[180px] px-4">
+        <p class="text-sm lg:text-lg text-gray-600 mt-5">
+            <span class="text-4xl font-semibold">A</span>t the heart of our commitment to fostering young talent, the
+            Aarambh Fellowship Program is more than just a training initiative—it's a launchpad for aspiring IT
+            professionals to excel in their careers. Since our inception, we have welcomed enthusiastic learners,
+            offering hands-on mentorship that has seen several graduates find placements both within our organization
+            and across the industry. Our journey has highlighted key gaps within the IT sector, and Aarambh is crafted
+            to bridge these gaps, providing foundational knowledge, real-world skills, and a nurturing environment where
+            talent thrives.
+
+        </p>
+        <p class="text-sm lg:text-lg text-gray-600 mt-5">
+            Nirjai is excited and ready to embark on this journey, grounded in our core values of trust, honesty, and
+            transparency. Now, it’s your moment to take a leap and embrace the path to excellence with us!
+        </p>
+    </div>
+
+    <!-- text-end -->
+
+    <!-- Program Phases-start -->
+    <div class="text-justify  lg:px-[180px] px-4">
+        <p class="text-justify lg:text-2xl lg:mt-24 mt-5 lg:font-semibold sm:text-black blocks"><span
+                class="text-4xl font-semibold">P</span>rogram Phases</p>
+        <p class="text-sm lg:text-lg text-gray-600 lg:mt-7 mt-5">
+            Our 4-month IT Training Program focuses on building strong technical foundations through hands-on projects,
+            while also emphasizing essential behavioral skills to foster discipline and professionalism for long-term
+            career success.
+
+        </p>
+        <div class="">
+            <!-- Add gap-x-12 to create right space -->
+            <div class="flex flex-col md:flex-row justify-between gap-x-40 gap-y-6">
+                <!-- First Section: Foundational Training -->
+                <div class="pt-6 bg-white w-full md:w-1/2">
+                    <div class="flex items-center mb-4">
+                        <!-- Icon Placeholder -->
+                        <div class="bg-gradient-to-r from-white to-[#ffa807] h-16 w-6 mr-3"></div>
+                        <h3 class="text-2xl font-semibold lg:mt-10 mt-0">IT Foundational Training</h3>
+                        <div class="mx-4 w-[2px] h-8 lg:mt-10 mt-0  bg-black"></div>
+                        <span class="text-lg font-semibold lg:mt-8 mt-0">WEEK <span
+                                class="text-black lg:text-4xl text-base">(1-2)</span></span>
+                    </div>
+                    <hr class="border-t-2 border-[#ffa807] mb-4">
+                    <ul class="list-disc ml-5 space-y-2 text-gray-700 custom-bullet">
+                        <li>
+                            Covers essential IT basics, building a strong understanding of core concepts.
+                        </li>
+                        <li>
+                            Focuses on hands-on exercises with a structured delivery model.
+                        </li>
+                        <li>
+                            Prepares trainees to work effectively in an agile environment through real-world scenarios.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Second Section: Specialization  -->
+                <div class="p-6 bg-white w-full md:w-1/2">
+                    <div class="flex items-center mb-4">
+                        <!-- Icon Placeholder -->
+                        <div class="bg-gradient-to-r from-white to-[#ffa807] h-16 w-6 mr-3"></div>
+                        <h3 class="text-2xl font-semibold lg:mt-10 mt-0">Specialization </h3>
+                        <div class="mx-4 w-[2px] h-8 lg:mt-10 mt-0  bg-black"></div>
+                        <span class="text-lg font-semibold lg:mt-8 mt-0">WEEK <span
+                                class="text-black lg:text-4xl text-base">(3-4)</span></span>
+                    </div>
+                    <hr class="border-t-2 border-[#ffa807] mb-4">
+                    <ul class="list-disc ml-5 space-y-2 text-gray-700 custom-bullet">
+                        <li>
+                            Provides in-depth knowledge and skills in a chosen IT field, such as Front-end development,
+                            Back-end development, DevOps, Data Analytics, cloud services.
+                        </li>
+                        <li>
+                            Encourages mastery of specialized tools and technologies relevant to the field.
+                        </li>
+                        <li>
+                            Emphasizes real-world applications within an agile framework to simulate industry
+                            environments.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!--2nd  -->
+        <div class="">
+            <!-- Add gap-x-12 to create right space -->
+            <div class="flex flex-col md:flex-row justify-between gap-x-40 gap-y-6">
+                <!-- First Section: Project Work -->
+                <div class="pt-6 bg-white w-full md:w-1/2">
+                    <div class="flex items-center mb-4">
+                        <!-- Icon Placeholder -->
+                        <div class="bg-gradient-to-r from-white to-[#ffa807] h-16 w-6 mr-3"></div>
+                        <h3 class="text-2xl font-semibold lg:mt-10 mt-0">Project Work</h3>
+                        <div class="mx-4 w-[2px] h-8 lg:mt-10 mt-0  bg-black"></div>
+                        <span class="text-lg font-semibold lg:mt-8 mt-0">WEEK <span
+                                class="text-black lg:text-4xl text-base">(5-10)</span></span>
+                    </div>
+                    <hr class="border-t-2 border-[#ffa807] mb-4">
+                    <ul class="list-disc ml-5 space-y-2 text-gray-700 custom-bullet">
+                        <li>
+                            Involves hands-on experience with live projects, applying learned skills in real-world
+                            scenarios.
+                        </li>
+                        <li>
+                            Encourages collaborative work in an agile environment, simulating industry practices.
+                        </li>
+                        <li>
+                            Focuses on end-to-end project execution, from planning to deployment.
+                        </li>
+                        <li>
+                            Builds problem-solving abilities and adaptability within a structured delivery model.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Second Section: Specialization  -->
+                <div class="p-6 bg-white w-full md:w-1/2">
+                    <div class="flex items-center mb-4">
+                        <!-- Icon Placeholder -->
+                        <div class="bg-gradient-to-r from-white to-[#ffa807] h-16 w-6 mr-3"></div>
+                        <h3 class="text-2xl font-semibold lg:mt-10 mt-0">Interview Prep </h3>
+                        <div class="mx-4 w-[2px] h-8 lg:mt-10 mt-0  bg-black"></div>
+                        <span class="text-lg font-semibold lg:mt-8 mt-0">WEEK <span
+                                class="text-black lg:text-4xl text-base">(11-12)</span></span>
+                    </div>
+                    <hr class="border-t-2 border-[#ffa807] mb-4">
+                    <ul class="list-disc ml-5 space-y-2 text-gray-700 custom-bullet">
+                        <li>
+                            Provides targeted training on interview techniques, resume building, and portfolio creation.
+                        </li>
+                        <li>
+                            Conducts mock interviews and real-time feedback sessions to boost confidence and readiness.
+                        </li>
+                        <li>
+                            Offers insights into industry expectations and guidance on adapting to workplace
+                            environments.
+                        </li>
+                        <li>
+                            Supports trainees in job placements by aligning skills with employer needs.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!--  -->
+    </div>
+    <!-- Program Phases-end -->
+
+    <!-- Your Tech Career-start -->
+    <div class="text-justify  lg:px-[180px] px-4">
+        <section class=" py-5">
+            <p class="text-justify lg:text-2xl lg:mt-10 mt-1 lg:font-semibold sm:text-black blocks">
+                <span class="text-4xl font-semibold">H</span>ands-on-Experience in Latest Technologies
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:py-10 py-3 blocks">
+                <div class="flex flex-row group">
+                    <div class="border-l-4 border-solid pr-4 border-black">
+                    </div>
+                    <div class="">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4 "
+                            style="background-color: #ffa807;">
+                            <img src="../../../assets/nirjai/icon/lap.png" class="h-8 w-8 text-black" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                        </div>
+                        <h3 class="lg:text-xl text-base mb-2 font-semibold text-black lg:mb-4">Web & Mobile
+                            Development</h3>
+                        <!--frontend image -->
+                        <div class="flex flex-row">
+                            <div class="flex flex-col md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/angular.png"
+                                    class=" md:w-auto md:h-auto w-14 h-14" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                <p>Angular</p>
+                            </div>
+                            <div class="flex flex-col md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/react.png"
+                                    class=" md:w-auto md:h-auto w-14 h-14" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                <p>React JS</p>
+                            </div>
+                            <div class="flex flex-col">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/flutter.png"
+                                    class="md:w-auto md:h-auto w-14 h-14" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                <p>Flutter</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row group">
+                    <div class="border-l-4 border-solid pr-4 border-black">
+                    </div>
+                    <div class="">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4 "
+                            style="background-color: #ffa807;">
+                            <img src="../../../../assets/nirjai/it-traning/icon/back-it.png" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                        </div>
+                        <h3 class="lg:text-xl text-base font-semibold text-black lg:mb-4 mb-2">Back-End Development
+                        </h3>
+                        <!--backend image -->
+                        <div class="flex flex-row ">
+                            <div class="flex flex-col md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/python.png"
+                                    class=" md:w-auto md:h-auto w-14 h-14" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                <p>Python</p>
+                            </div>
+                            <div class="flex flex-col md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/java.png"
+                                    class=" md:w-auto md:h-auto w-14 h-14" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                <p>Java</p>
+                            </div>
+                            <div class="flex flex-col ">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/c++.png"
+                                    class="md:w-auto md:h-auto w-14 h-14" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                <p class="ml-3">C#</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flex flex-row group">
+                    <div class="border-l-4 border-solid pr-4 border-black">
+                    </div>
+                    <div class="">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4 "
+                            style="background-color: #ffa807;">
+                            <img src="../../../../assets/nirjai/it-traning/icon/icon-itp.png" class="h-8 w-8 text-black"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        </div>
+                        <h3 class="lg:text-xl text-base font-semibold text-black lg:mb-4 mb-2">QA & Automation</h3>
+                        <!-- QA -->
+                        <div class="flex flex-row">
+                            <div class="flex flex-col items-center">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/Jmeter 1.png" 
+                                     class="md:w-auto md:h-16 w-14 h-12" 
+                                     alt="Jmeter">
+                                <p class="mt-2 text-center">Jmeter</p>
+                            </div>
+                            <!-- <div class="flex flex-col items-center md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/Jmeter 1.png" 
+                                     class="md:w-auto md:h-auto w-16 h-16" 
+                                     alt="Jmeter">
+                                <p class="mt-2 text-center">Jmeter</p>
+                            </div> -->
+                            <div class="flex flex-col items-center md:mr-8 ml-2">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/se.png" 
+                                     class="md:w-auto md:h-auto w-12 h-12" 
+                                     alt="Selenium">
+                                <p class="mt-2 text-center">Selenium</p>
+                            </div>
+                            <div class="flex flex-col items-center md:mr-8 ml-2">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/playwrite.png" 
+                                     class="md:w-auto md:h-auto w-12 h-12" 
+                                     alt="Playwright">
+                                <p class="mt-2 text-center">Playwright</p>
+                            </div>
+                            <div class="flex flex-col items-center md:mr-8 ml-2">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/cucumber.png" 
+                                     class="md:w-auto md:h-auto w-12 h-12" 
+                                     alt="Cucumber">
+                                <p class="mt-2 text-center">Cucumber</p>
+                            </div>
+                        </div>                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:py-10 py-3 mb-10 blocks">
+                <div class="flex flex-row group">
+                    <div class="border-l-4 border-solid pr-4 border-black">
+                    </div>
+                    <div class="">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4 "
+                            style="background-color: #ffa807;">
+                            <img src="../../../assets/nirjai/icon/cloud.png" class="h-8 w-8 text-black" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                        </div>
+                        <h3 class="lg:text-xl text-base mb-2 font-semibold text-black lg:mb-4">Cloud & DevOps</h3>
+                        <!-- cloud image -->
+                        <div class="flex flex-row">
+                            <div class="flex flex-col items-center md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/aws.png" 
+                                     class="md:w-auto md:h-auto w-12 h-12" 
+                                     alt="AWS">
+                                <p class="mt-2 text-center">AWS</p>
+                            </div>
+                            <div class="flex flex-col items-center md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/azure.png" 
+                                     class="md:w-auto md:h-auto w-12 h-12" 
+                                     alt="Azure">
+                                <p class="mt-2 text-center">Azure</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/Linux.png" 
+                                     class="md:w-auto md:h-auto w-12 h-12" 
+                                     alt="Linux">
+                                <p class="mt-2 text-center">Linux</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="flex flex-row group">
+                    <div class="border-l-4 border-solid pr-4 border-black">
+
+                    </div>
+                    <div class="">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4 "
+                            style="background-color: #ffa807;">
+                            <img src="../../../assets/nirjai/it-traning/icon/Rp2.png" class="h-8 w-8 text-black"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        </div>
+                        <h3 class="lg:text-xl text-base mb-2 font-semibold text-black lg:mb-4">Database Management
+                        </h3>
+                        <!-- Databaseimage -->
+                        <div class="flex flex-row">
+                            <div class="flex flex-col items-center md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/postsql.png" 
+                                     class="md:w-auto md:h-auto w-16 h-16" 
+                                     alt="PostgreSQL">
+                                <p class="mt-2 text-center">PostgreSQL</p>
+                            </div>
+                            <div class="flex flex-col items-center ">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/sql.png" 
+                                     class="md:w-auto md:h-auto w-16 h-16" 
+                                     alt="SQL">
+                                <p class="mt-2 text-center">SQL</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="flex flex-row group">
+                    <div class="border-l-4 border-solid pr-4 border-black">
+                    </div>
+                    <div class="">
+                        <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4 "
+                            style="background-color: #ffa807;">
+                            <img src="../../../assets/nirjai/icon/chart.png" class="h-8 w-8 text-black" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                        </div>
+                        <h3 class="lg:text-xl text-base mb-2 font-semibold text-black lg:mb-4">Data Science &
+                            Analytics</h3>
+                        <!-- Data Science image -->
+                        <div class="flex flex-row">
+                            <div class="flex flex-col items-center md:mr-10 mr-4">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/superset.png" 
+                                     class="md:w-auto md:h-auto w-16 h-16" 
+                                     alt="Superset">
+                                <p class="mt-2 text-center">Superset</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="../../../../assets/nirjai/it-traning/tech-icon/Power-BI.png" 
+                                     class="md:w-auto md:h-auto w-16 h-16" 
+                                     alt="Power BI">
+                                <p class="mt-2 text-center">Power BI</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+    <!-- Your Tech Career-end -->
+    <div class="text-justify lg:px-[180px] px-4">
+        <p class="text-justify lg:text-2xl lg:mt-10 mt-1 lg:font-semibold sm:text-black blocks">
+            <span class="text-4xl font-semibold">A</span>n Effective Approach to Launch Your Tech Career
+        </p>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:px-[180px] px-4 mt-10">
+        <!-- Card 1 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c1.png" alt="Live Classes" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f]">In-Person Classes</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Experience hands-on learning in an interactive environment with expert instructors, offering
+                personalized guidance and real-time collaboration to enhance your IT skills effectively.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c2.png" alt="Mentorship" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Mentorship</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Unlock your potential with the right mentorship from IT industry professionals. Receive regular
+                performance feedback, career insights, and support tailored to your unique learning journey and goals.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c3.png" alt="Small Batch of Aspirants"
+                class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f]">Small Batch of Aspirants</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Learn in a focused, collaborative setting with a limited group of peers, ensuring personalized
+                attention, active participation, and stronger connections with mentors and fellow trainees.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c4.png" alt="Take One Step at a Time" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f]">Take One Step at a Time</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Before diving into project work, we emphasize building a strong foundation in key IT concepts, equipping
+                candidates with essential skills needed to excel in their careers and confidently tackle real-world
+                challenges.
+            </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c5.png" alt="Hands-on Training on Latest Technology"
+                class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Hands-on Training on Latest Technology</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Get practical experience with cutting-edge tools and technologies, mastering real-world applications
+                through interactive sessions designed to prepare you for the fast-evolving IT industry.
+            </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c6.png" alt="Build Solid Portfolio" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Build Solid Portfolio</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Create a standout portfolio with real-world projects hosted on GitHub, showcasing your skills and
+                expertise to potential employers, helping you shine in the competitive IT job market.
+            </p>
+        </div>
+        <!-- Card 7 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c7.png" alt="Build Solid Portfolio" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Assessment based scoring</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Track your progress with regular assessments that provide clear scoring metrics, ensuring you understand
+                your strengths and areas for improvement throughout your IT training journey.
+            </p>
+        </div>
+        <!-- Card 8 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c6.png" alt="Build Solid Portfolio" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Job Placement Guidance</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Receive tailored coaching sessions focused on interview preparation, enhancing your confidence and
+                skills to impress potential employers and secure your dream IT job.</p>
+        </div>
+    </div>
+    <!-- why nirjai start -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:px-[180px] px-4 mt-10 ">
+        <!-- Card 1 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c9.png" alt="Live Classes" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Credentialing Your Expertise</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Upon completion, every student receives a certificate showcasing their skills and project contributions,
+                which can be shared on LinkedIn or other platforms to enhance networking opportunities.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c10.png" alt="Mentorship" class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] =">Motivational Rewards</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                Enjoy a range of incentives throughout the program, including fee refunds for top performers: 50% for
+                1st rank, 30% for 2nd rank, and 15% for 3rd rank. These rewards help keep you motivated and engaged in
+                your IT training.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c11.png" alt="Small Batch of Aspirants"
+                class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Assured Referrals</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                We will assured job referrals to the students who maintain a CGPA of 8 or higher receive dedicated
+                support and resources to secure job opportunities in the IT industry, empowering them to launch
+                successful careers.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#1f1f1f] p-10 rounded-lg text-center ">
+            <img src="../../../assets/nirjai/it-traning/icon/c12.png" alt="Take One Step at a Time"
+                class="mx-auto mb-4">
+            <h3 class="text-lg font-semibold text-[#e8b24f] ">Flexible Payment</h3>
+            <p class="text-[#e8b24f] font-normal mt-2">
+                We offer flexible payment methods, including a one-time lump sum payment or the option to pay in
+                installments on a monthly basis. This ensures that you can choose the payment plan that works best for
+                you.
+            </p>
+        </div>
+    </div>
+    <!-- why nirjai end -->
+</div>

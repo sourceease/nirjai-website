@@ -1,97 +1,139 @@
 <header class="font-[Poppins]">
-    <div class="p-2 lg:p-2 lg:px-20 w-full" 
-         [ngClass]="{ 'bg-white': selectedLink === 'it-training', 'bg-gradient-to-r from-[#25140d] to-[#4c271f]': selectedLink !== 'it-training' }">
-      <div class="container lg:mx-auto flex items-center justify-between">
-        <div class="flex items-center">
-          <div>
-            <img class="lg:w-44 w-[10rem] lg:ml-0 ml-3" [src]="logoSrc" alt="Logo">
+  <div class="p-2 lg:p-2 lg:px-20 w-full" 
+       [ngClass]="{ 
+         'bg-white': selectedLink === 'IT-Training-Program' || selectedLink === 'Aarambh-Program', 
+         'bg-gradient-to-r from-[#25140d] to-[#4c271f]': selectedLink !== 'IT-Training-Program' && selectedLink !== 'Aarambh-Program' 
+       }">
+    <div class="container lg:mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <div>
+          <img class="lg:w-44 w-[10rem] lg:ml-0 ml-3" [src]="logoSrc" alt="Logo">
+        </div>
+      </div>
+
+      <div id="navbar-links" class="hidden lg:flex space-x-6 mr-10">
+        <a 
+          (click)="selectLink('about')" 
+          [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'about', 'text-black': selectedLink === 'IT-Training-Program' || selectedLink === 'Aarambh-Program', 'text-white': selectedLink !== 'IT-Training-Program' && selectedLink !== 'Aarambh-Program' }"
+          class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
+        >
+          About Us
+        </a>
+        <a 
+          (click)="selectLink('services')" 
+          [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'services', 'text-black': selectedLink === 'IT-Training-Program' || selectedLink === 'Aarambh-Program', 'text-white': selectedLink !== 'IT-Training-Program' && selectedLink !== 'Aarambh-Program' }"
+          class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
+        >
+          Services
+        </a>
+        <a 
+          (click)="selectLink('approach')" 
+          [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'approach', 'text-black': selectedLink === 'IT-Training-Program' || selectedLink === 'Aarambh-Program', 'text-white': selectedLink !== 'IT-Training-Program' && selectedLink !== 'Aarambh-Program' }"
+          class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
+        >
+          Our Approach
+        </a>
+        <div class="relative">
+          <!-- Service dropdown trigger -->
+          <a (click)="toggleDropdown()" 
+             [ngClass]="{ 
+               'text-black': selectedLink === 'IT-Training-Program' || selectedLink === 'Aarambh-Program', 
+               'text-white': selectedLink !== 'IT-Training-Program' && selectedLink !== 'Aarambh-Program' 
+             }"
+             class="cursor-pointer hover:underline text-lg roboto-font flex items-center p-2">
+            IT Program
+          </a>
+        
+          <!-- Dropdown menu -->
+          <div *ngIf="isDropdownOpen" class="absolute bg-white shadow-md rounded mt-2 w-64">
+            <a 
+              (click)="selectLink('IT-Training-Program')" 
+              [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'IT-Training-Program', 'text-black': selectedLink === 'IT-Training-Program', 'text-gray-700': selectedLink !== 'IT-Training-Program' }"
+              class="hover:underline p-2 block cursor-pointer roboto-font text-lg"
+            >
+              About IT Training Program 
+            </a>
+            <a 
+              (click)="selectLink('Aarambh-Program')" 
+              [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'Aarambh-Program', 'text-black': selectedLink === 'Aarambh-Program', 'text-gray-700': selectedLink !== 'Aarambh-Program' }"
+              class="hover:underline p-2 block cursor-pointer roboto-font text-lg"
+            >
+              Aarambh Fellowship Program 
+            </a>
           </div>
         </div>
-  
-        <div id="navbar-links" class="hidden lg:flex space-x-6 mr-10">
-          <a 
-            (click)="selectLink('about')" 
-            [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'about', 'text-black': selectedLink === 'it-training', 'text-white': selectedLink !== 'it-training' }"
-            class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
-          >
-            About Us
-          </a>
-          <a 
-            (click)="selectLink('services')" 
-            [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'services', 'text-black': selectedLink === 'it-training', 'text-white': selectedLink !== 'it-training' }"
-            class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
-          >
-            Services
-          </a>
-          <a 
-            (click)="selectLink('approach')" 
-            [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'approach', 'text-black': selectedLink === 'it-training', 'text-white': selectedLink !== 'it-training' }"
-            class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
-          >
-            Our Approach
-          </a>
-          <a 
-            (click)="selectLink('it-training')" 
-            [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'it-training', 'text-black': selectedLink === 'it-training', 'text-white': selectedLink !== 'it-training' }"
-            class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
-          >
-            IT Training
-          </a>
-          <a 
-            (click)="selectLink('contact-us')" 
-            [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'contact-us', 'text-black': selectedLink === 'it-training', 'text-white': selectedLink !== 'it-training' }"
-            class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
-          >
-            Contact Us
-          </a>
-        </div>
-  
-        <!-- Hamburger menu (for small screens) -->
-        <button class="lg:hidden focus:outline-none" mat-button (click)="openHmbg()">
-          <mat-icon class="icon-size-15" [ngClass]="{'text-black': selectedLink === 'it-training', 'text-white': selectedLink !== 'it-training'}">menu</mat-icon>
-        </button>
+        
+        
+        <a 
+          (click)="selectLink('contact-us')" 
+          [ngClass]="{ 'border-b-2 border-yellow-500': selectedLink === 'contact-us', 'text-black': selectedLink === 'IT-Training-Program' || selectedLink === 'Aarambh-Program', 'text-white': selectedLink !== 'IT-Training-Program' && selectedLink !== 'Aarambh-Program' }"
+          class="hover:underline p-2 cursor-pointer roboto-font flex items-center text-lg"
+        >
+          Contact Us
+        </a>
       </div>
-    </div>
-  </header>
-  
-  
-  
 
-<!-- for mobile screen menu -->
+      <!-- Hamburger menu (for small screens) -->
+      <button class="lg:hidden focus:outline-none" mat-button (click)="openHmbg()">
+        <mat-icon class="icon-size-15" [ngClass]="{'text-black': selectedLink === 'IT-Training-Program' || selectedLink === 'Aarambh-Program', 'text-white': selectedLink !== 'IT-Training-Program' && selectedLink !== 'Aarambh-Program'}">menu</mat-icon>
+      </button>
+    </div>
+  </div>
+</header>
 
+<!-- Mobile Screen Menu -->
+<div 
+  [ngClass]="{
+    'right-0': hmbrOpen, 
+    '-right-full': !hmbrOpen
+  }" 
+  class="h-screen fixed top-0 bg-black w-full lg:hidden z-50 text-[#ffa807] font-[Poppins] transition-all duration-300 ease-in-out"
+>
+  <div class="flex items-center px-4 py-4">
+    <button (click)="openHmbg()" class="text-2xl text-[#ffa807]">
+      <mat-icon class="icon-size-8">arrow_back</mat-icon>
+    </button>
+    <span class="text-lg ml-4">Navigations</span>
+  </div>
+  
+  <div class="flex flex-col space-y-6 p-6">
+    <button (click)="openHmbg(); selectLink('')" class="flex items-center text-lg">
+      <img src="../../../../../../../../assets/nirjai/icon/Home.png" alt="Home Icon" class="mr-4">
+      Home
+    </button>
+    <button (click)="openHmbg(); selectLink('services')" class="flex items-center text-lg">
+      <img src="../../../../../../../../assets/nirjai/icon/services.png" alt="Services Icon" class="mr-4">
+      Services
+    </button>
+    <button (click)="openHmbg(); selectLink('approach')" class="flex items-center text-lg">
+      <img src="../../../../../../../../assets/nirjai/icon/our.png" alt="Our Approach Icon" class="mr-4">
+      Our Approach
+    </button>
+    <button (click)="openHmbg();" class="flex items-center text-lg">
+      <img src="../../../../../../../../assets/nirjai/icon/itTraning.png" alt="IT Program Icon" class="mr-4">
+      IT Program
+    </button>
+    <ul class="list-disc ml-5 space-y-2 custom-bullet">
+      <li>
+        <button (click)="openHmbg(); selectLink('IT-Training-Program')" class="flex items-center text-lg">
+          About IT Training Program 
+        </button>
+      </li>
+      <li>
+        <button (click)="openHmbg(); selectLink('Aarambh-Program')" class="flex items-center text-lg">
+          Aarambh Fellowship Program 
+        </button>
+      </li>
+    </ul>
+    <button (click)="openHmbg(); selectLink('contact-us')" class="flex items-center text-lg">
+      <img src="../../../../../../../../assets/nirjai/icon/cus.png" alt="Contact Us Icon" class="mr-4">
+      Contact Us
+    </button>
+  </div>
 
-<div [ngClass]="{'right-0': hmbrOpen, 'right-[-100%]': !hmbrOpen}" class=" h-screen absolute bg-black top-0 transition-all lg:hidden z-50 text-[#ffa807] font-[Poppins]">
-    <div class="flex items-center px-4 py-4">
-        <button (click)="openHmbg()" class="text-2xl text-[#ffa807]">
-            <mat-icon class="icon-size-8">arrow_back</mat-icon>
-        </button>
-        <span class="text-lg ml-4">Navigations</span>
-    </div>
-    <div class="flex flex-col space-y-6 p-6">
-        <button (click)="openHmbg();selectLink('')" class="flex items-center text-lg" mat-menu-item>
-            <img src="../../../../../../../../assets/nirjai/icon/Home.png" alt="Nirjai Technologies Logo" class="mr-4">
-            Home
-        </button>
-        <button (click)="openHmbg();selectLink('services')" class="flex items-center text-lg " mat-menu-item>
-            <img src="../../../../../../../../assets/nirjai/icon/services.png" alt="Nirjai Technologies Logo" class="mr-4">
-            Services
-        </button>
-        <button (click)="openHmbg();selectLink('approach')" class="flex items-center text-lg " mat-menu-item>
-            <img src="../../../../../../../../assets/nirjai/icon/our.png" alt="Nirjai Technologies Logo" class="mr-4">
-            Our Approach
-        </button>
-        <button (click)="openHmbg();selectLink('it-training')"  class="flex items-center text-lg" mat-menu-item>
-            <img src="../../../../../../../../assets/nirjai/icon/itTraning.png" alt="Nirjai Technologies Logo" class="mr-4">
-            IT Training Program
-        </button>
-        <button (click)="openHmbg();selectLink('contact-us')" class="flex items-center text-lg" mat-menu-item>
-            <img src="../../../../../../../../assets/nirjai/icon/cus.png" alt="Nirjai Technologies Logo" class="mr-4">
-            Contact Us
-        </button>
-    </div>
-    <div class="border-t border-solid border-[#ffa807] mr-14 ml-14" >
-    </div>
-    <div class="mt-10 flex justify-center pb-8">
-        <img src="../../../../../../../../assets/nirjai/home/logo.png" alt="Nirjai Technologies Logo" class="h-16">
-    </div>
+  <div class="border-t border-[#ffa807] mx-14"></div>
+  
+  <div class="mt-10 flex justify-center pb-8">
+    <img src="../../../../../../../../assets/nirjai/home/logo.png" alt="Nirjai Technologies Logo" class="h-16">
+  </div>
 </div>
